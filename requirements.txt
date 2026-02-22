@@ -1,0 +1,11 @@
+nicegui==3.6.1
+pyzmq==27.1.0
+cryptography==46.0.3
+meshtastic==2.7.6
+protobuf==6.33.4
+pywebview==6.1
+cffi==2.0.0
+# linux specific
+qtpy ; sys_platform == 'linux'
+PySide6 ; sys_platform == 'linux'
+PySide6-Addons ; sys_platform == 'linux'

@@ -1,0 +1,4 @@
+While the standard release includes a pre-built radio engine, source code requires you to build it manually. 
+You can do this by running the provided auto-engine-builder.sh (recommended) script or, 
+for a more customizable setup, by using the linuxenv.yml file with Conda/Micromamba.
+Use: ./micromamba create -f linuxenv.yml -p ./runtime

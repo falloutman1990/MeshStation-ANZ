@@ -1,0 +1,4 @@
+While the standard release includes a pre-built radio engine, source code requires you to build it manually. 
+You can do this by running the provided auto-engine-builder.bat script (recommended) or, 
+for a more customizable setup, by using the windowsenv.yml file with Conda/Micromamba.
+Use: micromamba.exe create -f windowsenv.yml -p ./runtime
