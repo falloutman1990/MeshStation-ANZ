@@ -115,40 +115,48 @@ LORA_PRESETS = {
         "EU_868": {"center_freq": 869_525_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 9},
         "EU_433": {"center_freq": 433_125_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 9},
         "US_915": {"center_freq": 913_125_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 9},
+        "ANZ": {"center_freq": 926_125_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 9},
     },
     "Long Fast": {
         "EU_868": {"center_freq": 869_525_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 11},
         "EU_433": {"center_freq": 433_875_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 11},
         "US_915": {"center_freq": 906_875_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 11},
+        "ANZ": {"center_freq": 919_875_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 11},
     },
     "Medium Slow": {
         "EU_868": {"center_freq": 869_525_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 10},
         "EU_433": {"center_freq": 433_875_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 10},
         "US_915": {"center_freq": 914_875_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 10},
+        "ANZ": {"center_freq": 927_875_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 10},
     },
     "Long Slow (depr.)": {
         "EU_868": {"center_freq": 869_462_500, "samp_rate": 1_000_000, "lora_bw": 125_000, "sf": 12},
         "EU_433": {"center_freq": 433_312_500, "samp_rate": 1_000_000, "lora_bw": 125_000, "sf": 12},
         "US_915": {"center_freq": 905_312_500, "samp_rate": 1_000_000, "lora_bw": 125_000, "sf": 12},
+        "ANZ": {"center_freq": 918_312_500, "samp_rate": 1_000_000, "lora_bw": 125_000, "sf": 12},
     },
     "Long Moderate": {
         "EU_868": {"center_freq": 869_587_500, "samp_rate": 1_000_000, "lora_bw": 125_000, "sf": 11},
         "EU_433": {"center_freq": 433_687_500, "samp_rate": 1_000_000, "lora_bw": 125_000, "sf": 11},
         "US_915": {"center_freq": 902_687_500, "samp_rate": 1_000_000, "lora_bw": 125_000, "sf": 11},
+        "ANZ": {"center_freq": 915_687_500, "samp_rate": 1_000_000, "lora_bw": 125_000, "sf": 11},
     },
     "Short Slow": {
         "EU_868": {"center_freq": 869_525_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 8},
         "EU_433": {"center_freq": 433_625_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 8},
         "US_915": {"center_freq": 920_625_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 8},
+        "ANZ": {"center_freq": 920_625_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 8},
     },
     "Short Fast": {
         "EU_868": {"center_freq": 869_525_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 7},
         "EU_433": {"center_freq": 433_875_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 7},
         "US_915": {"center_freq": 918_875_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 7},
+        "ANZ": {"center_freq": 918_875_000, "samp_rate": 1_000_000, "lora_bw": 250_000, "sf": 7},
     },
     "Short Turbo": {
         "EU_433": {"center_freq": 433_750_000, "samp_rate": 1_000_000, "lora_bw": 500_000, "sf": 7},
         "US_915": {"center_freq": 926_750_000, "samp_rate": 1_000_000, "lora_bw": 500_000, "sf": 7},
+        "ANZ": {"center_freq": 926_750_000, "samp_rate": 1_000_000, "lora_bw": 500_000, "sf": 7},
     },
 }
 
@@ -3789,7 +3797,7 @@ def main_page():
                             ui.label(translate("panel.connection.settings.internal.title", "Internal SDR Engine")).classes('font-bold mb-0')
                             ui.markdown(translate("panel.connection.settings.internal.help", 'The app manages the internal SDR engine for you.<br> Just select Region, Channel, PPM for your device and a suitable RF Gain.')).classes('text-sm text-gray-600')
                             ui.select(
-                                ['EU_868', 'EU_433', 'US_915'],
+                                ['EU_868', 'EU_433', 'US_915', 'ANZ'],
                                 value=state.direct_region,
                                 on_change=update_config_field('direct_region'),
                                 label=translate("panel.connection.settings.internal.label.region", "Region")
